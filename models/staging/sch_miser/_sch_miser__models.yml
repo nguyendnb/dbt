@@ -1,0 +1,11 @@
+
+
+version: 2
+
+models:
+
+  - name: nda_mvw
+  - name: loan_mvw
+  - name: savings_mvw
+  - name: cfm_mvw
+  - name: cfk_mvw

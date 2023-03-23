@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: sch_miser
+    description: ""
+    database: db_raw
+    schema: sch_miser
+    tables:
+      - name: nda_mvw
+        identifier: nda_mvw
+      - name: savings_mvw
+        identifier: savings_mvw
+      - name: loan_mvw
+        identifier: loan_mvw
+      - name: cfm_mvw
+        identifier: cfm_mvw
+      - name: cfk_mvw
+        identifier: cfk_mvw

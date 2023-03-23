@@ -1,0 +1,23 @@
+valley_dbt:
+  target: dev
+  outputs:
+    dev:
+      account: pl14514.west-europe.azure
+      database: DB_SANDBOX
+      password: 'z4n0hR7FUaMkQhf4J92U'
+      role: ACCOUNTADMIN
+      schema: SCH_INSAITDATASTORE
+      threads: 8
+      type: snowflake
+      user: maxtitov
+      warehouse: COMPUTE_WH
+    prod:
+      account: pl14514.west-europe.azure
+      database: DB_SANDBOX
+      password: '[input your password here]'
+      role: ACCOUNTADMIN
+      schema: SCH_INSAITDATASTORE
+      threads: 8
+      type: snowflake
+      user: '[input your password here]'
+      warehouse: COMPUTE_WH

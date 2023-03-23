@@ -1,0 +1,8 @@
+
+version: 2
+
+models:
+
+  - name: test_nda_core
+  - name: test_loan_core
+  - name: test_savings_core
