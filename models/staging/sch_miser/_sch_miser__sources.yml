@@ -7,12 +7,12 @@ sources:
     schema: sch_miser
     tables:
       - name: nda_mvw
-        identifier: nda_mvw
+        identifier: nda_mvw_fix
       - name: savings_mvw
-        identifier: savings_mvw
+        identifier: savings_mvw_fix
       - name: loan_mvw
-        identifier: loan_mvw
+        identifier: loan_mvw_fix
       - name: cfm_mvw
-        identifier: cfm_mvw
+        identifier: cfm_mvw_fix
       - name: cfk_mvw
-        identifier: cfk_mvw
+        identifier: cfk_mvw_fix

@@ -5,12 +5,24 @@
     )
 }}
 
+{% set sql_statement %}
+    select max(cfk_az_batch_update) from {{ this }}
+{% endset %}
+
+{%- set temp = dbt_utils.get_single_value(sql_statement) -%}
+
+{% if temp is not none %}
+    {% set lastest_update_at = temp %}
+{% else %}
+    {% set lastest_update_at = '0000-00-00' %}
+{% endif %}
+
 with
 
 loan as (
 
     select * from {{ ref('loan_mvw') }}
-    where az_batch_date >= date({{ var('az_batch_date', 'current_date()') }})
+    where az_batch_date >= date({{ var('az_batch_date', lastest_update_at) }})
 
 ),
 
@@ -20,7 +32,7 @@ cfk as (
         cfk_cif_nbr,
         cfk_acct_nbr
     from {{ ref('cfk_mvw') }}
-    where az_batch_date >= date({{ var('az_batch_date', 'current_date()') }})
+    where az_batch_date >= date({{ var('az_batch_date', lastest_update_at) }})
 
 ),
 
@@ -107,7 +119,7 @@ final as (
                 'bal_ytd_l',
                 'bal_prev_l',
                 'late_py_l',
-                'late_ty_l'
+                'late_ty_l',
                 'pr_bal_l',
                 'bal_last_stmt_l',
                 'beg_year_bal_l',

@@ -4,11 +4,25 @@
         unique_key=['cfk_az_batch_update', 'cfk_cif_nbr']
     )
 }}
-{%- set types = ['savings', 'cd', ] -%}
+
+{%- set types = ['savings', 'cd'] -%}
+
+{% set sql_statement %}
+    select max(cfk_az_batch_update) from {{ this }}
+{% endset %}
+
+{%- set temp = dbt_utils.get_single_value(sql_statement) -%}
+
+{% if temp is not none %}
+    {% set lastest_update_at = temp %}
+{% else %}
+    {% set lastest_update_at = '0000-00-00' %}
+{% endif %}
+
 with savings as (
 
     select * from {{ ref('savings_mvw') }}
-    where az_batch_date >= date({{ var('az_batch_date', 'current_date()') }})
+    where az_batch_date >= date({{ var('az_batch_date', lastest_update_at) }})
 
 ),
 
@@ -18,7 +32,7 @@ cfk as (
         cfk_cif_nbr,
         cfk_acct_nbr
     from {{ ref('cfk_mvw') }}
-    where az_batch_date >= date({{ var('az_batch_date', 'current_date()') }})
+    where az_batch_date >= date({{ var('az_batch_date', lastest_update_at) }})
 
 ),
 
