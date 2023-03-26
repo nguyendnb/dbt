@@ -13,7 +13,7 @@
 
 {%- set temp = dbt_utils.get_single_value(sql_statement) -%}
 
-{% if temp is not none %}
+{% if temp is not none and is_incremental() == true %}
     {% set lastest_update_at = temp %}
 {% else %}
     {% set lastest_update_at = '0000-00-00' %}

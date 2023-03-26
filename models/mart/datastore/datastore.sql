@@ -11,7 +11,7 @@
 
 {%- set temp = dbt_utils.get_single_value(sql_statement) -%}
 
-{% if temp is not none %}
+{% if temp is not none and is_incremental() == true %}
     {% set lastest_update_at = temp %}
 {% else %}
     {% set lastest_update_at = '0000-00-00' %}
@@ -21,7 +21,7 @@ with
 
 final as (
 
-    select
+    select distinct
         cfm.cfmr_customer_id as cfk_cif_nbr,
         cfm.az_batch_date as cfk_az_batch_update,
         {{ dbt_utils.star(from=ref('cfm_mvw'), except=['cfmr_customer_id', 'az_batch_date']) }},
@@ -31,10 +31,13 @@ final as (
     from {{ ref('cfm_mvw') }} cfm
     left join {{ ref('test_nda_core') }} nda
         on cfm.cfmr_customer_id = nda.cfk_cif_nbr
+            and cfm.az_batch_date = nda.cfk_az_batch_update
     left join {{ ref('test_loan_core') }} loan
         on cfm.cfmr_customer_id = loan.cfk_cif_nbr
+            and cfm.az_batch_date = loan.cfk_az_batch_update
     left join {{ ref('test_savings_core') }} savings
         on cfm.cfmr_customer_id = savings.cfk_cif_nbr
+            and cfm.az_batch_date = savings.cfk_az_batch_update
     where cfm.az_batch_date >= date({{ var('az_batch_date', lastest_update_at) }})
 
 )
