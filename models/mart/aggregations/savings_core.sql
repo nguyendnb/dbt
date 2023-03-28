@@ -7,22 +7,22 @@
 
 {%- set types = ['savings', 'cd'] -%}
 
-{% set sql_statement %}
-    select max(cfk_az_batch_update) from {{ this }}
-{% endset %}
-
-{%- set temp = dbt_utils.get_single_value(sql_statement) -%}
-
-{% if temp is not none and is_incremental() == true %}
-    {% set lastest_update_at = temp %}
-{% else %}
-    {% set lastest_update_at = '0000-00-00' %}
-{% endif %}
-
 with savings as (
 
     select * from {{ ref('savings_mvw') }}
-    where az_batch_date >= date({{ var('az_batch_date', lastest_update_at) }})
+    {% if
+        is_incremental() == true
+        and var('start_date', none) == None
+        and var('end_date', none) == None
+    %}
+        where az_batch_date not in (select distinct cfk_az_batch_update from {{ this }})
+    {% elif
+        is_incremental() == true
+        and var('start_date', none) != None
+        and var('end_date', none) != None
+    %}
+        where az_batch_date between to_date('{{ var("start_date") }}') and to_date('{{ var("end_date") }}')
+    {% endif %}
 
 ),
 
@@ -32,7 +32,19 @@ cfk as (
         cfk_cif_nbr,
         cfk_acct_nbr
     from {{ ref('cfk_mvw') }}
-    where az_batch_date >= date({{ var('az_batch_date', lastest_update_at) }})
+    {% if
+        is_incremental() == true
+        and var('start_date', none) == None
+        and var('end_date', none) == None
+    %}
+        where az_batch_date not in (select distinct cfk_az_batch_update from {{ this }})
+    {% elif
+        is_incremental() == true
+        and var('start_date', none) != None
+        and var('end_date', none) != None
+    %}
+        where az_batch_date between to_date('{{ var("start_date") }}') and to_date('{{ var("end_date") }}')
+    {% endif %}
 
 ),
 
