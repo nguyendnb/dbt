@@ -29,6 +29,7 @@ with savings as (
 cfk as (
 
     select distinct
+        az_batch_date,
         cfk_cif_nbr,
         cfk_acct_nbr
     from {{ ref('cfk_mvw') }}
@@ -52,7 +53,7 @@ final as (
 
     select
 
-        savings.az_batch_date as cfk_az_batch_update,
+        cfk.az_batch_date as cfk_az_batch_update,
         cfk.cfk_cif_nbr,
         {% for type in types -%}
         count(distinct case when type = '{{ type }}' then s_acct_nbr end) as cmt_nbr_{{ type }},
@@ -102,6 +103,7 @@ final as (
     from cfk
     left join savings
         on cfk.cfk_acct_nbr = savings.s_acct_nbr
+            and cfk.az_batch_date = savings.az_batch_date
     group by 1, 2
 
 )

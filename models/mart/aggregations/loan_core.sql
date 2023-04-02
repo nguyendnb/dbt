@@ -29,6 +29,7 @@ loan as (
 cfk as (
 
     select distinct
+        az_batch_date,
         cfk_cif_nbr,
         cfk_acct_nbr
     from {{ ref('cfk_mvw') }}
@@ -52,7 +53,7 @@ final as (
 
     select
 
-        az_batch_date as cfk_az_batch_update,
+        cfk.az_batch_date as cfk_az_batch_update,
         cfk.cfk_cif_nbr,
         count(distinct(l_acct_nbr)) as amt_nbr_l,
         count_if(l_status = 1) as amt_active_l,
@@ -146,6 +147,7 @@ final as (
     from cfk
     left join loan
         on cfk.cfk_acct_nbr = loan.l_acct_nbr
+            and cfk.az_batch_date = loan.az_batch_date
     group by 1, 2
 )
 

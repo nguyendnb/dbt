@@ -29,6 +29,7 @@ nda as (
 cfk as (
 
     select distinct
+        az_batch_date,
         cfk_cif_nbr,
         cfk_acct_nbr
     from {{ ref('cfk_mvw') }}
@@ -51,7 +52,7 @@ cfk as (
 final as (
 
     select
-        az_batch_date as cfk_az_batch_update,
+        cfk.az_batch_date as cfk_az_batch_update,
         cfk.cfk_cif_nbr,
         count(distinct(nd_acct_nbr)) as amt_acct_ca,
         count_if(nd_status = 1) as amt_acct_open_ca,
@@ -130,6 +131,7 @@ final as (
     from cfk
     left join nda
         on cfk.cfk_acct_nbr = nda.nd_acct_nbr
+            and cfk.az_batch_date = nda.az_batch_date
     group by 1, 2
 
 )
