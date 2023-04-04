@@ -12,16 +12,9 @@ loan as (
     select * from {{ ref('loan_mvw') }}
     {% if
         is_incremental() == true
-        and var('start_date', none) == None
-        and var('end_date', none) == None
+        and var('date', none) != None
     %}
-        where az_batch_date not in (select distinct cfk_az_batch_update from {{ this }})
-    {% elif
-        is_incremental() == true
-        and var('start_date', none) != None
-        and var('end_date', none) != None
-    %}
-        where az_batch_date between to_date('{{ var("start_date") }}') and to_date('{{ var("end_date") }}')
+        where az_batch_date = to_date('{{ var("date") }}')
     {% endif %}
 
 ),
@@ -29,21 +22,15 @@ loan as (
 cfk as (
 
     select distinct
+        az_batch_date,
         cfk_cif_nbr,
         cfk_acct_nbr
     from {{ ref('cfk_mvw') }}
     {% if
         is_incremental() == true
-        and var('start_date', none) == None
-        and var('end_date', none) == None
+        and var('date', none) != None
     %}
-        where az_batch_date not in (select distinct cfk_az_batch_update from {{ this }})
-    {% elif
-        is_incremental() == true
-        and var('start_date', none) != None
-        and var('end_date', none) != None
-    %}
-        where az_batch_date between to_date('{{ var("start_date") }}') and to_date('{{ var("end_date") }}')
+        where az_batch_date = to_date('{{ var("date") }}')
     {% endif %}
 
 ),
@@ -52,7 +39,7 @@ final as (
 
     select
 
-        az_batch_date as cfk_az_batch_update,
+        cfk.az_batch_date as cfk_az_batch_update,
         cfk.cfk_cif_nbr,
         count(distinct(l_acct_nbr)) as amt_nbr_l,
         count_if(l_status = 1) as amt_active_l,
@@ -146,6 +133,7 @@ final as (
     from cfk
     left join loan
         on cfk.cfk_acct_nbr = loan.l_acct_nbr
+            and cfk.az_batch_date = loan.az_batch_date
     group by 1, 2
 )
 

@@ -12,16 +12,9 @@ with savings as (
     select * from {{ ref('savings_mvw') }}
     {% if
         is_incremental() == true
-        and var('start_date', none) == None
-        and var('end_date', none) == None
+        and var('date', none) != None
     %}
-        where az_batch_date not in (select distinct cfk_az_batch_update from {{ this }})
-    {% elif
-        is_incremental() == true
-        and var('start_date', none) != None
-        and var('end_date', none) != None
-    %}
-        where az_batch_date between to_date('{{ var("start_date") }}') and to_date('{{ var("end_date") }}')
+        where az_batch_date = to_date('{{ var("date") }}')
     {% endif %}
 
 ),
@@ -29,21 +22,15 @@ with savings as (
 cfk as (
 
     select distinct
+        az_batch_date,
         cfk_cif_nbr,
         cfk_acct_nbr
     from {{ ref('cfk_mvw') }}
     {% if
         is_incremental() == true
-        and var('start_date', none) == None
-        and var('end_date', none) == None
+        and var('date', none) != None
     %}
-        where az_batch_date not in (select distinct cfk_az_batch_update from {{ this }})
-    {% elif
-        is_incremental() == true
-        and var('start_date', none) != None
-        and var('end_date', none) != None
-    %}
-        where az_batch_date between to_date('{{ var("start_date") }}') and to_date('{{ var("end_date") }}')
+        where az_batch_date = to_date('{{ var("date") }}')
     {% endif %}
 
 ),
@@ -52,7 +39,7 @@ final as (
 
     select
 
-        savings.az_batch_date as cfk_az_batch_update,
+        cfk.az_batch_date as cfk_az_batch_update,
         cfk.cfk_cif_nbr,
         {% for type in types -%}
         count(distinct case when type = '{{ type }}' then s_acct_nbr end) as cmt_nbr_{{ type }},
@@ -102,6 +89,7 @@ final as (
     from cfk
     left join savings
         on cfk.cfk_acct_nbr = savings.s_acct_nbr
+            and cfk.az_batch_date = savings.az_batch_date
     group by 1, 2
 
 )
