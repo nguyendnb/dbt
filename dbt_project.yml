@@ -36,9 +36,11 @@ models:
   valley_dbt:
     # Config indicated by + and applies to all files under models/example/
     staging:
+      +tags: 'staging'
       sch_miser:
         +materialized: table
     mart:
+      +tags: 'mart'
       aggregations:
         +materialized: table
       datastore:
