@@ -43,3 +43,6 @@ models:
         +materialized: table
       datastore:
         +materialized: table
+  
+  elementary:
+    +schema: 'elementary'

@@ -21,3 +21,19 @@ valley_dbt:
       type: snowflake
       user: '[input your password here]'
       warehouse: COMPUTE_WH
+
+elementary:
+  outputs:
+    default:
+      type: snowflake
+      account: pl14514.west-europe.azure
+
+      ## User/password auth ##
+      user: maxtitov
+      password: 'z4n0hR7FUaMkQhf4J92U'
+
+      role: ACCOUNTADMIN
+      database: DB_SANDBOX
+      warehouse: COMPUTE_WH
+      schema: SCH_INSAITDATASTORE_ELEMENTARY
+      threads: 4

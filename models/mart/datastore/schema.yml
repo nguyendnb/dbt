@@ -1,7 +1,1729 @@
-
 version: 2
 
 models:
-
   - name: datastore
-    description: datastore
+    columns:
+      - name: CFK_CIF_NBR
+        data_type: VARCHAR
+    
+      - name: CFK_AZ_BATCH_UPDATE
+        data_type: DATE
+    
+      - name: CFMR_ALRT_CANCL_DT
+        data_type: DATE
+    
+      - name: CFMR_AR_LAST_FM
+        data_type: DATE
+    
+      - name: CFMR_AUD_LST_ACT
+        data_type: DATE
+    
+      - name: CFMR_BIRTHDATE
+        data_type: DATE
+    
+      - name: CFMR_CERT_DT
+        data_type: DATE
+    
+      - name: CFMR_CERT_THRU_DT
+        data_type: DATE
+    
+      - name: CFMR_CIB_LST_ACT
+        data_type: DATE
+    
+      - name: CFMR_CMB_LST_ACT
+        data_type: DATE
+    
+      - name: CFMR_DATE_OPENED
+        data_type: DATE
+    
+      - name: CFMR_DEATH_DT
+        data_type: DATE
+    
+      - name: CFMR_DEL_CANCEL_DT
+        data_type: DATE
+    
+      - name: CFMR_DT_CLOSED
+        data_type: DATE
+    
+      - name: CFMR_DT_LAST_ADDR
+        data_type: DATE
+    
+      - name: CFMR_DT_LAST_CL
+        data_type: DATE
+    
+      - name: CFMR_DT_LAST_FM
+        data_type: DATE
+    
+      - name: CFMR_EXP_DT_1
+        data_type: DATE
+    
+      - name: CFMR_EXP_DT_2
+        data_type: DATE
+    
+      - name: CFMR_EXP_DT_3
+        data_type: DATE
+    
+      - name: CFMR_EXP_DT_4
+        data_type: DATE
+    
+      - name: CFMR_EXP_DT_5
+        data_type: DATE
+    
+      - name: CFMR_EXP_DT_6
+        data_type: DATE
+    
+      - name: CFMR_FFI_VERIFY_DT
+        data_type: DATE
+    
+      - name: CFMR_ITIN_EXPIR_DT
+        data_type: DATE
+    
+      - name: CFMR_PRIVACY_DT
+        data_type: DATE
+    
+      - name: CFMR_RIB_LST_ACT
+        data_type: DATE
+    
+      - name: CFMR_RMB_LST_ACT
+        data_type: DATE
+    
+      - name: CFMR_SEA_START_DT
+        data_type: DATE
+    
+      - name: CFMR_SEA_STOP_DT
+        data_type: DATE
+    
+      - name: CFMR_W8BENE_REQ_DT
+        data_type: DATE
+    
+      - name: CFMR_ALERTS
+        data_type: FLOAT
+    
+      - name: CFMR_LAST_NAME
+        data_type: FLOAT
+    
+      - name: CFMR_APPL_CODE
+        data_type: FLOAT
+    
+      - name: CFMR_APPL_TYPE
+        data_type: FLOAT
+    
+      - name: CFMR_AR_STATUS
+        data_type: FLOAT
+    
+      - name: CFMR_AR_VPIN_LL
+        data_type: FLOAT
+    
+      - name: CFMR_AR_VPIN_OFF
+        data_type: FLOAT
+    
+      - name: CFMR_ASSN_NBR
+        data_type: FLOAT
+    
+      - name: CFMR_CC_OPTION
+        data_type: FLOAT
+    
+      - name: CFMR_CEN_OFFICER
+        data_type: FLOAT
+    
+      - name: CFMR_COMBINE_IND
+        data_type: FLOAT
+    
+      - name: CFMR_CTR_EXMT_AMT
+        data_type: FLOAT
+    
+      - name: CFMR_CTR_EXMT_END
+        data_type: FLOAT
+    
+      - name: CFMR_DELIVERY
+        data_type: FLOAT
+    
+      - name: CFMR_DELIVERY_PT
+        data_type: FLOAT
+    
+      - name: CFMR_DELQ_CTR
+        data_type: FLOAT
+    
+      - name: CFMR_EDELIVERY
+        data_type: FLOAT
+    
+      - name: CFMR_EMAIL_CNT
+        data_type: FLOAT
+    
+      - name: CFMR_EMP_CD
+        data_type: FLOAT
+    
+      - name: CFMR_ENTITY_FLAG
+        data_type: FLOAT
+    
+      - name: CFMR_ENTITY_ID
+        data_type: FLOAT
+    
+      - name: CFMR_EXP_ALPHA_1
+        data_type: FLOAT
+    
+      - name: CFMR_EXP_ALPHA_2
+        data_type: FLOAT
+    
+      - name: CFMR_EXP_ALPHA_3
+        data_type: FLOAT
+    
+      - name: CFMR_EXP_ALPHA_4
+        data_type: FLOAT
+    
+      - name: CFMR_EXP_ALPHA_5
+        data_type: FLOAT
+    
+      - name: CFMR_EXP_ALPHA_6
+        data_type: FLOAT
+    
+      - name: CFMR_EXP_ALPHA20
+        data_type: FLOAT
+    
+      - name: CFMR_EXP_CHAR_1
+        data_type: FLOAT
+    
+      - name: CFMR_EXP_CHAR_2
+        data_type: FLOAT
+    
+      - name: CFMR_EXP_CHAR_3
+        data_type: FLOAT
+    
+      - name: CFMR_EXP_CHAR_4
+        data_type: FLOAT
+    
+      - name: CFMR_EXP_CHAR_5
+        data_type: FLOAT
+    
+      - name: CFMR_EXP_CHAR_6
+        data_type: FLOAT
+    
+      - name: CFMR_EXP_NBR_1
+        data_type: FLOAT
+    
+      - name: CFMR_EXP_NBR_2
+        data_type: FLOAT
+    
+      - name: CFMR_EXP_NBR_3
+        data_type: FLOAT
+    
+      - name: CFMR_EXP_NUMRIC_1
+        data_type: FLOAT
+    
+      - name: CFMR_EXP_NUMRIC_2
+        data_type: FLOAT
+    
+      - name: CFMR_EXP_NUMRIC_3
+        data_type: FLOAT
+    
+      - name: CFMR_EXP_NUMRIC_4
+        data_type: FLOAT
+    
+      - name: CFMR_EXP_NUMRIC_5
+        data_type: FLOAT
+    
+      - name: CFMR_EXP_NUMRIC_6
+        data_type: FLOAT
+    
+      - name: CFMR_EXP1_OPTION
+        data_type: FLOAT
+    
+      - name: CFMR_EXP2_OPTION
+        data_type: FLOAT
+    
+      - name: CFMR_EXP3_OPTION
+        data_type: FLOAT
+    
+      - name: CFMR_FATCA_CLASS
+        data_type: FLOAT
+    
+      - name: CFMR_FOREIGN_IND
+        data_type: FLOAT
+    
+      - name: CFMR_GRP3_NBR
+        data_type: FLOAT
+    
+      - name: CFMR_IB_VPIN_OFF
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_CODE_1
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_CODE_2
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_01
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_02
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_03
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_04
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_05
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_06
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_07
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_08
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_09
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_10
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_11
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_12
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_13
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_14
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_15
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_16
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_17
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_18
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_19
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_20
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_21
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_22
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_23
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_24
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_25
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_26
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_27
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_28
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_29
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_30
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_31
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_32
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_33
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_34
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_35
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_36
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_37
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_38
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_39
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_40
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_41
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_42
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_43
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_44
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_45
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_53
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_54
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_58
+        data_type: FLOAT
+    
+      - name: CFMR_LOCK_FLAG_59
+        data_type: FLOAT
+    
+      - name: CFMR_MAIL_CODE
+        data_type: FLOAT
+    
+      - name: CFMR_NOSOL_EMAIL
+        data_type: FLOAT
+    
+      - name: CFMR_NOSOL_EXP
+        data_type: FLOAT
+    
+      - name: CFMR_NOSOL_MAIL
+        data_type: FLOAT
+    
+      - name: CFMR_NOSOL_PHONE
+        data_type: FLOAT
+    
+      - name: CFMR_NOTE_IND
+        data_type: FLOAT
+    
+      - name: CFMR_NV_OPTION
+        data_type: FLOAT
+    
+      - name: CFMR_OWN_RENT
+        data_type: FLOAT
+    
+      - name: CFMR_REVIEW_CODE
+        data_type: FLOAT
+    
+      - name: CFMR_SEA_USAGE
+        data_type: FLOAT
+    
+      - name: CFMR_STATE_CODE2
+        data_type: FLOAT
+    
+      - name: CFMR_TEMP_PIN_IND
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_CD_1
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_CD_2
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_04
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_05
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_06
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_07
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_08
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_09
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_10
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_11
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_12
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_13
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_14
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_15
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_16
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_17
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_18
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_19
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_20
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_21
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_22
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_23
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_24
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_25
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_26
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_27
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_28
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_29
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_30
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_31
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_32
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_33
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_34
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_35
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_36
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_37
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_38
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_39
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_40
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_41
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_42
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_43
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_44
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_45
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_46
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_47
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_48
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_49
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_50
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_51
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_52
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_53
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_54
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_55
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_56
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_57
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_58
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_59
+        data_type: FLOAT
+    
+      - name: CFMR_WARN_FLAG_60
+        data_type: FLOAT
+    
+      - name: CFMR_AGE
+        data_type: NUMBER
+    
+      - name: CFMR_AGENT_OFFICER
+        data_type: NUMBER
+    
+      - name: CFMR_AR_FM_HHMM
+        data_type: NUMBER
+    
+      - name: CFMR_AR_PIN_OFF
+        data_type: NUMBER
+    
+      - name: CFMR_BUS_PH_INTL
+        data_type: NUMBER
+    
+      - name: CFMR_BUS_PHONE_EXT
+        data_type: NUMBER
+    
+      - name: CFMR_CELL_PH_INTL
+        data_type: NUMBER
+    
+      - name: CFMR_CENSUS_TRACT
+        data_type: NUMBER
+    
+      - name: CFMR_CRA_NBR
+        data_type: NUMBER
+    
+      - name: CFMR_EDUC_LEVEL
+        data_type: NUMBER
+    
+      - name: CFMR_FAX_PH_INTL
+        data_type: NUMBER
+    
+      - name: CFMR_HOME_PH_INTL
+        data_type: NUMBER
+    
+      - name: CFMR_HOUSEHOLD_NO
+        data_type: NUMBER
+    
+      - name: CFMR_INCOME_LEVEL
+        data_type: NUMBER
+    
+      - name: CFMR_LIFESTYLE_CD
+        data_type: NUMBER
+    
+      - name: CFMR_LOC_CODE
+        data_type: NUMBER
+    
+      - name: CFMR_NAICS_CODE
+        data_type: NUMBER
+    
+      - name: CFMR_NBR_DEPEND
+        data_type: NUMBER
+    
+      - name: CFMR_OCCUP_CODE
+        data_type: NUMBER
+    
+      - name: CFMR_OPEN_BRANCH
+        data_type: NUMBER
+    
+      - name: CFMR_OPEN_REASON
+        data_type: NUMBER
+    
+      - name: CFMR_SIC_CODE
+        data_type: NUMBER
+    
+      - name: CFMR_SMSA_NBR
+        data_type: NUMBER
+    
+      - name: CFMR_STATE_CODE
+        data_type: NUMBER
+    
+      - name: CFMR_TAX_ID_KEY
+        data_type: NUMBER
+    
+      - name: CFMR_TAX_ID_TYPE
+        data_type: NUMBER
+    
+      - name: CFMR_1042_CORR
+        data_type: VARCHAR
+    
+      - name: CFMR_1042PCT_DP_PY
+        data_type: VARCHAR
+    
+      - name: CFMR_1042PCT_LN_PY
+        data_type: VARCHAR
+    
+      - name: CFMR_ACCT_NAME
+        data_type: VARCHAR
+    
+      - name: CFMR_ADDITION_ADDR
+        data_type: VARCHAR
+    
+      - name: CFMR_ADDR_KEY
+        data_type: VARCHAR
+    
+      - name: CFMR_ADDRESS_IND
+        data_type: VARCHAR
+    
+      - name: CFMR_AFF_INFO_IND
+        data_type: VARCHAR
+    
+      - name: CFMR_AFFILIATE_NBR
+        data_type: VARCHAR
+    
+      - name: CFMR_ALPHA_KEY
+        data_type: VARCHAR
+    
+      - name: CFMR_BUS_NAME
+        data_type: VARCHAR
+    
+      - name: CFMR_CASH_TRK_ID
+        data_type: VARCHAR
+    
+      - name: CFMR_CELL_PHONE
+        data_type: VARCHAR
+    
+      - name: CFMR_CERT_LOB_CAT
+        data_type: VARCHAR
+    
+      - name: CFMR_CERT_PCT
+        data_type: VARCHAR
+    
+      - name: CFMR_CERT_TYPE
+        data_type: VARCHAR
+    
+      - name: CFMR_CITY
+        data_type: VARCHAR
+    
+      - name: CFMR_CNV_EXC_FLAG
+        data_type: VARCHAR
+    
+      - name: CFMR_CRED_RATING
+        data_type: VARCHAR
+    
+      - name: CFMR_CTR_EXEMPT_ST
+        data_type: VARCHAR
+    
+      - name: CFMR_CTR_EXMT_STRT
+        data_type: VARCHAR
+    
+      - name: CFMR_CUST_TYPE
+        data_type: VARCHAR
+    
+      - name: CFMR_DEATH_ADDED
+        data_type: VARCHAR
+    
+      - name: CFMR_DEATH_SRC
+        data_type: VARCHAR
+    
+      - name: CFMR_DELIVERY_ADDR
+        data_type: VARCHAR
+    
+      - name: CFMR_DOC_DLVRY_IND1
+        data_type: VARCHAR
+    
+      - name: CFMR_DOC_DLVRY_IND2
+        data_type: VARCHAR
+    
+      - name: CFMR_DOC_DLVRY_IND3
+        data_type: VARCHAR
+    
+      - name: CFMR_DOC_DLVRY_IND4
+        data_type: VARCHAR
+    
+      - name: CFMR_DOC_DLVRY_IND5
+        data_type: VARCHAR
+    
+      - name: CFMR_FIRST_NAME
+        data_type: VARCHAR
+    
+      - name: CFMR_FOREIGN_FLG
+        data_type: VARCHAR
+    
+      - name: CFMR_FRGN_TAX_TYPE
+        data_type: VARCHAR
+    
+      - name: CFMR_FRGN_TAXID
+        data_type: VARCHAR
+    
+      - name: CFMR_GRP1_NBR
+        data_type: VARCHAR
+    
+      - name: CFMR_GRP2_NBR
+        data_type: VARCHAR
+    
+      - name: CFMR_INC_CNTRY_ABR
+        data_type: VARCHAR
+    
+      - name: CFMR_INFO_ATTN
+        data_type: VARCHAR
+    
+      - name: CFMR_LATITUDE
+        data_type: VARCHAR
+    
+      - name: CFMR_LOCK_FLAG_46
+        data_type: VARCHAR
+    
+      - name: CFMR_LOCK_FLAG_47
+        data_type: VARCHAR
+    
+      - name: CFMR_LOCK_FLAG_48
+        data_type: VARCHAR
+    
+      - name: CFMR_LOCK_FLAG_49
+        data_type: VARCHAR
+    
+      - name: CFMR_LOCK_FLAG_50
+        data_type: VARCHAR
+    
+      - name: CFMR_LOCK_FLAG_51
+        data_type: VARCHAR
+    
+      - name: CFMR_LOCK_FLAG_52
+        data_type: VARCHAR
+    
+      - name: CFMR_LOCK_FLAG_55
+        data_type: VARCHAR
+    
+      - name: CFMR_LOCK_FLAG_56
+        data_type: VARCHAR
+    
+      - name: CFMR_LOCK_FLAG_57
+        data_type: VARCHAR
+    
+      - name: CFMR_LOCK_FLAG_60
+        data_type: VARCHAR
+    
+      - name: CFMR_LONGITUDE
+        data_type: VARCHAR
+    
+      - name: CFMR_MAIL_ADDR_IND
+        data_type: VARCHAR
+    
+      - name: CFMR_MARITAL_STAT
+        data_type: VARCHAR
+    
+      - name: CFMR_MIDDLE_NAME
+        data_type: VARCHAR
+    
+      - name: CFMR_MISC_ID
+        data_type: VARCHAR
+    
+      - name: CFMR_NOSOL_BUS
+        data_type: VARCHAR
+    
+      - name: CFMR_NOSOL_CELL
+        data_type: VARCHAR
+    
+      - name: CFMR_NOSOL_FAX
+        data_type: VARCHAR
+    
+      - name: CFMR_NOSOL_PAGER
+        data_type: VARCHAR
+    
+      - name: CFMR_NRA_CLASS
+        data_type: VARCHAR
+    
+      - name: CFMR_NRA_NO_INC_YR
+        data_type: VARCHAR
+    
+      - name: CFMR_OCCUPATION
+        data_type: VARCHAR
+    
+      - name: CFMR_ORG_CNTRY_ABR
+        data_type: VARCHAR
+    
+      - name: CFMR_PHONE_NO_BUS
+        data_type: VARCHAR
+    
+      - name: CFMR_PHONE_NO_RES
+        data_type: VARCHAR
+    
+      - name: CFMR_PREFIX
+        data_type: VARCHAR
+    
+      - name: CFMR_PRIVACY_IND
+        data_type: VARCHAR
+    
+      - name: CFMR_RACE
+        data_type: VARCHAR
+    
+      - name: CFMR_RCIF_NO
+        data_type: VARCHAR
+    
+      - name: CFMR_RES_CNTRY_ABR
+        data_type: VARCHAR
+    
+      - name: CFMR_SEX
+        data_type: VARCHAR
+    
+      - name: CFMR_STATE
+        data_type: VARCHAR
+    
+      - name: CFMR_STATE_RES
+        data_type: VARCHAR
+    
+      - name: CFMR_STATUS
+        data_type: VARCHAR
+    
+      - name: CFMR_SUFFIX
+        data_type: VARCHAR
+    
+      - name: CFMR_TAX_ID_NO
+        data_type: VARCHAR
+    
+      - name: CFMR_US_NFFE_PCNT
+        data_type: VARCHAR
+    
+      - name: CFMR_WARN_FLAG_01
+        data_type: VARCHAR
+    
+      - name: CFMR_WARN_FLAG_02
+        data_type: VARCHAR
+    
+      - name: CFMR_WARN_FLAG_03
+        data_type: VARCHAR
+    
+      - name: CFMR_ZIP
+        data_type: VARCHAR
+    
+      - name: AMT_ACCT_CA
+        data_type: NUMBER
+    
+      - name: AMT_ACCT_OPEN_CA
+        data_type: NUMBER
+    
+      - name: AMT_ACCT_CLOSE_CA
+        data_type: NUMBER
+    
+      - name: SUM_DAYS_OVERDRAWN_PRV_YR_CA
+        data_type: NUMBER
+    
+      - name: SUM_DAYS_OVERDRAWN_YTD_CA
+        data_type: NUMBER
+    
+      - name: FRAUD_CA
+        data_type: NUMBER
+    
+      - name: NBR_WITHDRAWALS_OVERDARWN_CA
+        data_type: NUMBER
+    
+      - name: ATM_CARD_CA
+        data_type: NUMBER
+    
+      - name: TRAN_ACCT_CA
+        data_type: NUMBER
+    
+      - name: IF_EMPLOYEE_CA
+        data_type: NUMBER
+    
+      - name: CASH_MNGMNT_CA
+        data_type: NUMBER
+    
+      - name: EXTND_OVERDRAFT_CA
+        data_type: NUMBER
+    
+      - name: IF_LC_CODE_CA
+        data_type: NUMBER
+    
+      - name: MIN_ACCT_BAL_CA
+        data_type: FLOAT
+    
+      - name: MAX_ACCT_BAL_CA
+        data_type: FLOAT
+    
+      - name: AVG_ACCT_BAL_CA
+        data_type: FLOAT
+    
+      - name: SUM_ACCT_BAL_CA
+        data_type: FLOAT
+    
+      - name: MIN_BAL_YTD_CA
+        data_type: FLOAT
+    
+      - name: MAX_BAL_YTD_CA
+        data_type: FLOAT
+    
+      - name: AVG_BAL_YTD_CA
+        data_type: FLOAT
+    
+      - name: SUM_BAL_YTD_CA
+        data_type: FLOAT
+    
+      - name: MIN_BAL_PRV_CA
+        data_type: FLOAT
+    
+      - name: MAX_BAL_PRV_CA
+        data_type: FLOAT
+    
+      - name: AVG_BAL_PRV_CA
+        data_type: FLOAT
+    
+      - name: SUM_BAL_PRV_CA
+        data_type: FLOAT
+    
+      - name: MIN_NBR_CREDITS_CA
+        data_type: NUMBER
+    
+      - name: MAX_NBR_CREDITS_CA
+        data_type: NUMBER
+    
+      - name: AVG_NBR_CREDITS_CA
+        data_type: NUMBER
+    
+      - name: SUM_NBR_CREDITS_CA
+        data_type: NUMBER
+    
+      - name: MIN_NBR_DEBITS_CA
+        data_type: NUMBER
+    
+      - name: MAX_NBR_DEBITS_CA
+        data_type: NUMBER
+    
+      - name: AVG_NBR_DEBITS_CA
+        data_type: NUMBER
+    
+      - name: SUM_NBR_DEBITS_CA
+        data_type: NUMBER
+    
+      - name: MIN_NBR_DEP_ITEMS_CA
+        data_type: NUMBER
+    
+      - name: MAX_NBR_DEP_ITEMS_CA
+        data_type: NUMBER
+    
+      - name: AVG_NBR_DEP_ITEMS_CA
+        data_type: NUMBER
+    
+      - name: SUM_NBR_DEP_ITEMS_CA
+        data_type: NUMBER
+    
+      - name: MIN_NBR_DEPOSITS_CA
+        data_type: NUMBER
+    
+      - name: MAX_NBR_DEPOSITS_CA
+        data_type: NUMBER
+    
+      - name: AVG_NBR_DEPOSITS_CA
+        data_type: NUMBER
+    
+      - name: SUM_NBR_DEPOSITS_CA
+        data_type: NUMBER
+    
+      - name: MIN_OTC_CA
+        data_type: NUMBER
+    
+      - name: MAX_OTC_CA
+        data_type: NUMBER
+    
+      - name: AVG_OTC_CA
+        data_type: NUMBER
+    
+      - name: SUM_OTC_CA
+        data_type: NUMBER
+    
+      - name: MIN_TIMES_NSF_LTD_CA
+        data_type: NUMBER
+    
+      - name: MAX_TIMES_NSF_LTD_CA
+        data_type: NUMBER
+    
+      - name: AVG_TIMES_NSF_LTD_CA
+        data_type: NUMBER
+    
+      - name: SUM_TIMES_NSF_LTD_CA
+        data_type: NUMBER
+    
+      - name: MIN_PATM_WD_CA
+        data_type: NUMBER
+    
+      - name: MAX_PATM_WD_CA
+        data_type: NUMBER
+    
+      - name: AVG_PATM_WD_CA
+        data_type: NUMBER
+    
+      - name: SUM_PATM_WD_CA
+        data_type: NUMBER
+    
+      - name: MIN_POS_WD_CA
+        data_type: NUMBER
+    
+      - name: MAX_POS_WD_CA
+        data_type: NUMBER
+    
+      - name: AVG_POS_WD_CA
+        data_type: NUMBER
+    
+      - name: SUM_POS_WD_CA
+        data_type: NUMBER
+    
+      - name: MIN_HARD_HOLDS_CA
+        data_type: NUMBER
+    
+      - name: MAX_HARD_HOLDS_CA
+        data_type: NUMBER
+    
+      - name: AVG_HARD_HOLDS_CA
+        data_type: NUMBER
+    
+      - name: SUM_HARD_HOLDS_CA
+        data_type: NUMBER
+    
+      - name: MIN_OPEN_AMT_CA
+        data_type: FLOAT
+    
+      - name: MAX_OPEN_AMT_CA
+        data_type: FLOAT
+    
+      - name: AVG_OPEN_AMT_CA
+        data_type: FLOAT
+    
+      - name: MIN_IR_CA
+        data_type: FLOAT
+    
+      - name: MAX_IR_CA
+        data_type: FLOAT
+    
+      - name: AVG_IR_CA
+        data_type: FLOAT
+    
+      - name: MIN_DAYS_OPEN_CA
+        data_type: NUMBER
+    
+      - name: MAX_DAYS_OPEN_CA
+        data_type: NUMBER
+    
+      - name: AVG_DAYS_OPEN_CA
+        data_type: NUMBER
+    
+      - name: MIN_DEP_CA
+        data_type: FLOAT
+    
+      - name: MAX_DEP_CA
+        data_type: FLOAT
+    
+      - name: AVG_DEP_CA
+        data_type: FLOAT
+    
+      - name: MIN_DAYS_DEP_CA
+        data_type: NUMBER
+    
+      - name: MAX_DAYS_DEP_CA
+        data_type: NUMBER
+    
+      - name: AVG_DAYS_DEP_CA
+        data_type: NUMBER
+    
+      - name: MIN_DAYS_MONENT_TRANS_CA
+        data_type: NUMBER
+    
+      - name: MAX_DAYS_MONENT_TRANS_CA
+        data_type: NUMBER
+    
+      - name: AVG_DAYS_MONENT_TRANS_CA
+        data_type: NUMBER
+    
+      - name: MIN_PREV_YTD_IR_CA
+        data_type: FLOAT
+    
+      - name: MAX_PREV_YTD_IR_CA
+        data_type: FLOAT
+    
+      - name: AVG_PREV_YTD_IR_CA
+        data_type: FLOAT
+    
+      - name: MIN_YTD_IR_CA
+        data_type: FLOAT
+    
+      - name: MAX_YTD_IR_CA
+        data_type: FLOAT
+    
+      - name: AVG_YTD_IR_CA
+        data_type: FLOAT
+    
+      - name: MIN_INT_PR_STATE_CA
+        data_type: FLOAT
+    
+      - name: MAX_INT_PR_STATE_CA
+        data_type: FLOAT
+    
+      - name: AVG_INT_PR_STATE_CA
+        data_type: FLOAT
+    
+      - name: MIN_INT_YTD_STATE_CA
+        data_type: FLOAT
+    
+      - name: MAX_INT_YTD_STATE_CA
+        data_type: FLOAT
+    
+      - name: AVG_INT_YTD_STATE_CA
+        data_type: FLOAT
+    
+      - name: AMT_NBR_L
+        data_type: NUMBER
+    
+      - name: AMT_ACTIVE_L
+        data_type: NUMBER
+    
+      - name: AMT_CLOSE_L
+        data_type: NUMBER
+    
+      - name: AMT_INSTALLMENT_L
+        data_type: NUMBER
+    
+      - name: AMT_MORTGAGE_L
+        data_type: NUMBER
+    
+      - name: AMT_COMMERCIAL_L
+        data_type: NUMBER
+    
+      - name: AMT_LATE_30_L
+        data_type: NUMBER
+    
+      - name: AMT_LATE_60_L
+        data_type: NUMBER
+    
+      - name: AMT_LATE_90_L
+        data_type: NUMBER
+    
+      - name: AMT_LATE_120_L
+        data_type: NUMBER
+    
+      - name: MAX_RATE_L
+        data_type: FLOAT
+    
+      - name: MIN_RATE_L
+        data_type: FLOAT
+    
+      - name: MIN_CRED_SCORE_L
+        data_type: NUMBER
+    
+      - name: MAX_CRED_SCORE_L
+        data_type: NUMBER
+    
+      - name: MIN_COMM_LOAN_AMT_L
+        data_type: NUMBER
+    
+      - name: MAX_COMM_LOAN_AMT_L
+        data_type: NUMBER
+    
+      - name: MIN_OUTSTAND_L
+        data_type: FLOAT
+    
+      - name: MAX_OUTSTAND_L
+        data_type: FLOAT
+    
+      - name: MIN_LATE_DAYS_L
+        data_type: NUMBER
+    
+      - name: MAX_LATE_DAYS_L
+        data_type: NUMBER
+    
+      - name: MIN_ORIG_BAL_L
+        data_type: FLOAT
+    
+      - name: MAX_ORIG_BAL_L
+        data_type: FLOAT
+    
+      - name: AVG_ORIG_BAL_L
+        data_type: FLOAT
+    
+      - name: MIN_ORIG_RATE_L
+        data_type: FLOAT
+    
+      - name: MAX_ORIG_RATE_L
+        data_type: FLOAT
+    
+      - name: AVG_ORIG_RATE_L
+        data_type: FLOAT
+    
+      - name: MIN_INT_RATE_L
+        data_type: FLOAT
+    
+      - name: MAX_INT_RATE_L
+        data_type: FLOAT
+    
+      - name: AVG_INT_RATE_L
+        data_type: FLOAT
+    
+      - name: MIN_YTD_INTR_LBILLED_PR_DUE_L
+        data_type: FLOAT
+    
+      - name: MAX_YTD_INTR_LBILLED_PR_DUE_L
+        data_type: FLOAT
+    
+      - name: AVG_YTD_INTR_LBILLED_PR_DUE_L
+        data_type: FLOAT
+    
+      - name: MIN_CHRG_OFF_INT_L
+        data_type: FLOAT
+    
+      - name: MAX_CHRG_OFF_INT_L
+        data_type: FLOAT
+    
+      - name: AVG_CHRG_OFF_INT_L
+        data_type: FLOAT
+    
+      - name: MIN_LC_PAID_L
+        data_type: FLOAT
+    
+      - name: MAX_LC_PAID_L
+        data_type: FLOAT
+    
+      - name: AVG_LC_PAID_L
+        data_type: FLOAT
+    
+      - name: MIN_DT_LAST_ACT_L
+        data_type: NUMBER
+    
+      - name: MAX_DT_LAST_ACT_L
+        data_type: NUMBER
+    
+      - name: AVG_DT_LAST_ACT_L
+        data_type: NUMBER
+    
+      - name: MIN_
+        data_type: NUMBER
+    
+      - name: MAX_
+        data_type: NUMBER
+    
+      - name: AVG_
+        data_type: NUMBER
+    
+      - name: MIN_BAL_YTD_L
+        data_type: NUMBER
+    
+      - name: MAX_BAL_YTD_L
+        data_type: NUMBER
+    
+      - name: AVG_BAL_YTD_L
+        data_type: NUMBER
+    
+      - name: SUM_BAL_YTD_L
+        data_type: NUMBER
+    
+      - name: MIN_BAL_PREV_L
+        data_type: FLOAT
+    
+      - name: MAX_BAL_PREV_L
+        data_type: FLOAT
+    
+      - name: AVG_BAL_PREV_L
+        data_type: FLOAT
+    
+      - name: SUM_BAL_PREV_L
+        data_type: FLOAT
+    
+      - name: MIN_LATE_PY_L
+        data_type: NUMBER
+    
+      - name: MAX_LATE_PY_L
+        data_type: NUMBER
+    
+      - name: AVG_LATE_PY_L
+        data_type: NUMBER
+    
+      - name: SUM_LATE_PY_L
+        data_type: NUMBER
+    
+      - name: MIN_LATE_TY_L
+        data_type: NUMBER
+    
+      - name: MAX_LATE_TY_L
+        data_type: NUMBER
+    
+      - name: AVG_LATE_TY_L
+        data_type: NUMBER
+    
+      - name: SUM_LATE_TY_L
+        data_type: NUMBER
+    
+      - name: MIN_PR_BAL_L
+        data_type: NUMBER
+    
+      - name: MAX_PR_BAL_L
+        data_type: NUMBER
+    
+      - name: AVG_PR_BAL_L
+        data_type: NUMBER
+    
+      - name: SUM_PR_BAL_L
+        data_type: NUMBER
+    
+      - name: MIN_BAL_LAST_STMT_L
+        data_type: FLOAT
+    
+      - name: MAX_BAL_LAST_STMT_L
+        data_type: FLOAT
+    
+      - name: AVG_BAL_LAST_STMT_L
+        data_type: FLOAT
+    
+      - name: SUM_BAL_LAST_STMT_L
+        data_type: FLOAT
+    
+      - name: MIN_BEG_YEAR_BAL_L
+        data_type: NUMBER
+    
+      - name: MAX_BEG_YEAR_BAL_L
+        data_type: NUMBER
+    
+      - name: AVG_BEG_YEAR_BAL_L
+        data_type: NUMBER
+    
+      - name: SUM_BEG_YEAR_BAL_L
+        data_type: NUMBER
+    
+      - name: MIN_CHRG_OFF_AMT_L
+        data_type: NUMBER
+    
+      - name: MAX_CHRG_OFF_AMT_L
+        data_type: NUMBER
+    
+      - name: AVG_CHRG_OFF_AMT_L
+        data_type: NUMBER
+    
+      - name: SUM_CHRG_OFF_AMT_L
+        data_type: NUMBER
+    
+      - name: MIN_ESC_BAL_L
+        data_type: FLOAT
+    
+      - name: MAX_ESC_BAL_L
+        data_type: FLOAT
+    
+      - name: AVG_ESC_BAL_L
+        data_type: FLOAT
+    
+      - name: SUM_ESC_BAL_L
+        data_type: FLOAT
+    
+      - name: MIN_L_ORIG_COMM_AMT
+        data_type: NUMBER
+    
+      - name: MAX_L_ORIG_COMM_AMT
+        data_type: NUMBER
+    
+      - name: AVG_L_ORIG_COMM_AMT
+        data_type: NUMBER
+    
+      - name: SUM_L_ORIG_COMM_AMT
+        data_type: NUMBER
+    
+      - name: MIN_AVE_BAL_PYR_L
+        data_type: FLOAT
+    
+      - name: MAX_AVE_BAL_PYR_L
+        data_type: FLOAT
+    
+      - name: AVG_AVE_BAL_PYR_L
+        data_type: FLOAT
+    
+      - name: SUM_AVE_BAL_PYR_L
+        data_type: FLOAT
+    
+      - name: MIN_DELQ_PY_L
+        data_type: NUMBER
+    
+      - name: MAX_DELQ_PY_L
+        data_type: NUMBER
+    
+      - name: AVG_DELQ_PY_L
+        data_type: NUMBER
+    
+      - name: SUM_DELQ_PY_L
+        data_type: NUMBER
+    
+      - name: CMT_NBR_SAVINGS
+        data_type: NUMBER
+    
+      - name: AMOUNT_OPEN_SAVINGS
+        data_type: NUMBER
+    
+      - name: AMOUNT_CLOSE_SAVINGS
+        data_type: NUMBER
+    
+      - name: AMT_PASS_SAVINGS
+        data_type: NUMBER
+    
+      - name: AMT_PASS_STATMNT_SAVINGS
+        data_type: NUMBER
+    
+      - name: AMT_STATMNT_SAVINGS
+        data_type: NUMBER
+    
+      - name: MIN_NBR_WD_CYC_SAVINGS
+        data_type: NUMBER
+    
+      - name: MAX_NBR_WD_CYC_SAVINGS
+        data_type: NUMBER
+    
+      - name: AVG_NBR_WD_CYC_SAVINGS
+        data_type: NUMBER
+    
+      - name: SUM_NBR_WD_CYC_SAVINGS
+        data_type: NUMBER
+    
+      - name: MIN_ACCT_BAL_SAVINGS
+        data_type: FLOAT
+    
+      - name: MAX_ACCT_BAL_SAVINGS
+        data_type: FLOAT
+    
+      - name: AVG_ACCT_BAL_SAVINGS
+        data_type: FLOAT
+    
+      - name: SUM_ACCT_BAL_SAVINGS
+        data_type: FLOAT
+    
+      - name: MIN_BAL_YTD_SAVINGS
+        data_type: FLOAT
+    
+      - name: MAX_BAL_YTD_SAVINGS
+        data_type: FLOAT
+    
+      - name: AVG_BAL_YTD_SAVINGS
+        data_type: FLOAT
+    
+      - name: SUM_BAL_YTD_SAVINGS
+        data_type: FLOAT
+    
+      - name: MIN_OPEN_SAVINGS
+        data_type: NUMBER
+    
+      - name: MAX_OPEN_SAVINGS
+        data_type: NUMBER
+    
+      - name: AVG_OPEN_SAVINGS
+        data_type: NUMBER
+    
+      - name: MIN_IR_SAVINGS
+        data_type: FLOAT
+    
+      - name: MAX_IR_SAVINGS
+        data_type: FLOAT
+    
+      - name: AVG_IR_SAVINGS
+        data_type: FLOAT
+    
+      - name: MIN_IR_YTD_SAVINGS
+        data_type: FLOAT
+    
+      - name: MAX_IR_YTD_SAVINGS
+        data_type: FLOAT
+    
+      - name: AVG_IR_YTD_SAVINGS
+        data_type: FLOAT
+    
+      - name: MIN_SOR_INT_YTD_SAVINGS
+        data_type: FLOAT
+    
+      - name: MAX_SOR_INT_YTD_SAVINGS
+        data_type: FLOAT
+    
+      - name: AVG_SOR_INT_YTD_SAVINGS
+        data_type: FLOAT
+    
+      - name: MIN_BAL_LAST_STMT_SAVINGS
+        data_type: FLOAT
+    
+      - name: MAX_BAL_LAST_STMT_SAVINGS
+        data_type: FLOAT
+    
+      - name: AVG_BAL_LAST_STMT_SAVINGS
+        data_type: FLOAT
+    
+      - name: MIN_AMT_LAST_DEP_SAVINGS
+        data_type: FLOAT
+    
+      - name: MAX_AMT_LAST_DEP_SAVINGS
+        data_type: FLOAT
+    
+      - name: AVG_AMT_LAST_DEP_SAVINGS
+        data_type: FLOAT
+    
+      - name: MIN_DORM_DT_SAVINGS
+        data_type: NUMBER
+    
+      - name: MAX_DORM_DT_SAVINGS
+        data_type: NUMBER
+    
+      - name: AVG_DORM_DT_SAVINGS
+        data_type: NUMBER
+    
+      - name: CMT_NBR_CD
+        data_type: NUMBER
+    
+      - name: AMOUNT_OPEN_CD
+        data_type: NUMBER
+    
+      - name: AMOUNT_CLOSE_CD
+        data_type: NUMBER
+    
+      - name: AMT_PASS_CD
+        data_type: NUMBER
+    
+      - name: AMT_PASS_STATMNT_CD
+        data_type: NUMBER
+    
+      - name: AMT_STATMNT_CD
+        data_type: NUMBER
+    
+      - name: MIN_NBR_WD_CYC_CD
+        data_type: NUMBER
+    
+      - name: MAX_NBR_WD_CYC_CD
+        data_type: NUMBER
+    
+      - name: AVG_NBR_WD_CYC_CD
+        data_type: NUMBER
+    
+      - name: SUM_NBR_WD_CYC_CD
+        data_type: NUMBER
+    
+      - name: MIN_ACCT_BAL_CD
+        data_type: FLOAT
+    
+      - name: MAX_ACCT_BAL_CD
+        data_type: FLOAT
+    
+      - name: AVG_ACCT_BAL_CD
+        data_type: FLOAT
+    
+      - name: SUM_ACCT_BAL_CD
+        data_type: FLOAT
+    
+      - name: MIN_BAL_YTD_CD
+        data_type: FLOAT
+    
+      - name: MAX_BAL_YTD_CD
+        data_type: FLOAT
+    
+      - name: AVG_BAL_YTD_CD
+        data_type: FLOAT
+    
+      - name: SUM_BAL_YTD_CD
+        data_type: FLOAT
+    
+      - name: MIN_OPEN_CD
+        data_type: NUMBER
+    
+      - name: MAX_OPEN_CD
+        data_type: NUMBER
+    
+      - name: AVG_OPEN_CD
+        data_type: NUMBER
+    
+      - name: MIN_IR_CD
+        data_type: FLOAT
+    
+      - name: MAX_IR_CD
+        data_type: FLOAT
+    
+      - name: AVG_IR_CD
+        data_type: FLOAT
+    
+      - name: MIN_IR_YTD_CD
+        data_type: FLOAT
+    
+      - name: MAX_IR_YTD_CD
+        data_type: FLOAT
+    
+      - name: AVG_IR_YTD_CD
+        data_type: FLOAT
+    
+      - name: MIN_SOR_INT_YTD_CD
+        data_type: FLOAT
+    
+      - name: MAX_SOR_INT_YTD_CD
+        data_type: FLOAT
+    
+      - name: AVG_SOR_INT_YTD_CD
+        data_type: FLOAT
+    
+      - name: MIN_BAL_LAST_STMT_CD
+        data_type: FLOAT
+    
+      - name: MAX_BAL_LAST_STMT_CD
+        data_type: FLOAT
+    
+      - name: AVG_BAL_LAST_STMT_CD
+        data_type: FLOAT
+    
+      - name: MIN_AMT_LAST_DEP_CD
+        data_type: FLOAT
+    
+      - name: MAX_AMT_LAST_DEP_CD
+        data_type: FLOAT
+    
+      - name: AVG_AMT_LAST_DEP_CD
+        data_type: FLOAT
+    
+      - name: MIN_DORM_DT_CD
+        data_type: NUMBER
+    
+      - name: MAX_DORM_DT_CD
+        data_type: NUMBER
+    
+      - name: AVG_DORM_DT_CD
+        data_type: NUMBER
+    
+    tests:
+      - elementary.schema_changes_from_baseline
+      - elementary.volume_anomalies:
+          timestamp_column: CFK_AZ_BATCH_UPDATE
+          time_bucket:                # Daily by default
+            period: day
+            count: 1
+          backfill_days: 1000
+          config:
+          # optional - change severity
+            severity: warn
